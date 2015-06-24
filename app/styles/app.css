@@ -2,3 +2,22 @@
   padding-right: 0px;
   padding-left: 10px;
 }
+.submit-btn {
+  margin-top: 20px;
+}
+
+.form-control {
+  width: 97%
+}
+
+.address {
+  height: 34px;
+  padding: 6px 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.4286;
+  color: #555;
+  border-radius: 4px;
+  width: 32%;
+  border: 1px solid #ccc;
+}

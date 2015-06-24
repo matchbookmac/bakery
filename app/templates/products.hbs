@@ -1,0 +1,23 @@
+<div class="col-md-3">
+  {{#if viewing}}
+  {{partial "products/product-list"}}
+  {{/if}}
+  {{#if editing}}
+  {{partial "products/edit-product-list"}}
+  {{/if}}
+</div>
+
+<div class="col-md-9">
+
+  {{#if viewing}}
+    {{outlet}}
+  {{/if}}
+
+  {{#if adding}}
+    {{partial "products/new-product"}}
+  {{/if}}
+
+  {{#if editing}}
+    {{partial "products/edit-product"}}
+  {{/if}}
+</div>

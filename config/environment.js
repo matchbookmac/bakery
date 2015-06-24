@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'bakery',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com 'wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx'" },
     firebase: 'https://bakerypdx.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
@@ -23,7 +23,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'font-src': "'self'",
-      'connect-src': "'self' https://bakerypdx.firebaseio.com/",
+      'connect-src': "'self' https://bakerypdx.firebaseio.com/ wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline'",
       'frame-src': "'none'"

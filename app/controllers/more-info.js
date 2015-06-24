@@ -3,9 +3,10 @@ import Ember from 'ember';
 needs: ['products', 'contacts']
 
 export default Ember.ArrayController.extend({
+  selectedProductsList: null,
   actions: {
     contactProducts: function() {
-      // if (document.getElementsByTagName('input').)
+      var selectedProducts = this.get('selectedProductsList');
     }
   }
 });

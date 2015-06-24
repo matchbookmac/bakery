@@ -34,5 +34,9 @@
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
     "emberfire": "1.4.7"
+  },
+  "dependencies": {
+    "ember-cli": "^0.2.7",
+    "ember-cli-htmlbars": "^0.7.9"
   }
 }

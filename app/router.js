@@ -17,6 +17,8 @@ Router.map(function() {
     });
   });
   this.route('admin');
+  this.resource('contact');
+  this.resource('contacts');
 });
 
 export default Router;

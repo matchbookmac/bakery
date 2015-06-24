@@ -1,0 +1,7 @@
+<ul>
+  {{#each product in model}}
+    <li {{action "editProduct"}}>
+      {{#link-to "edit-product" product.id}}{{product.title}}{{/link-to}}
+    </li>
+  {{/each}}
+</ul>

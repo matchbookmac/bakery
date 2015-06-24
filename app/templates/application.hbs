@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Bakery</a>
+    {{#link-to "about" class="navbar-brand"}}Bakery{{/link-to}}
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -18,7 +18,7 @@
         <li><a href="contact">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class=""><a href="admin">Administrator</a></li>
+        <li>{{#link-to "admin" class="navbar-brand"}}Administrator{{/link-to}}</li>
       </ul>
     </div><!-- /.navbar-collapse -->
 

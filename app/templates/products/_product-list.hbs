@@ -1,6 +1,7 @@
 <ul>
+  normal product list
   {{#each product in model}}
-    <li {{action "viewProduct"}}>
+    <li>
       {{#link-to "product" product.id}}{{product.title}}{{/link-to}}
     </li>
   {{/each}}

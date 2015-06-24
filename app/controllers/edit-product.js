@@ -14,11 +14,22 @@ export default Ember.Controller.extend({
       product.save();
       var productsController = this.get('controllers.products')
       productsController.setProperties({
-        viewing: true,
-        editing: false,
+        editing: true,
+        viewing: false,
         adding: false
       });
-      this.transitionToRoute('product', product.id);
+      this.transitionToRoute('edit');
+    },
+    deleteProduct: function () {
+      var product = this.get("model");
+      product.destroyRecord();
+      var productsController = this.get('controllers.products')
+      productsController.setProperties({
+        editing: true,
+        viewing: false,
+        adding: false
+      });
+      this.transitionToRoute("edit")
     }
   }
 });

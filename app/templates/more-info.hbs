@@ -18,7 +18,11 @@
 {{view "select" content=model
                 optionLabelPath="content.title"
                 optionValuePath="content.id"
-                prompt="Choose the products:"}}
+                name="moreInfoSelect"
+                id="moreInfoSelect"
+                size=model.length
+                selectionBinding=selectedProductsList
+                multiple="true"}}
 <!-- export default DS.Model.extend({
   title: DS.attr("string"),
   description: DS.attr("string"),

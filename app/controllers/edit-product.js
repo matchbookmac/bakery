@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs: ['products'],
   actions: {
     updateProduct: function() {
       var product = this.get("model")
@@ -10,7 +11,14 @@ export default Ember.Controller.extend({
         batchSize: this.get("model.batchSize"),
         cost: this.get("model.cost")
       });
-        product.save();
+      product.save();
+      var productsController = this.get('controllers.products')
+      productsController.setProperties({
+        viewing: true,
+        editing: false,
+        adding: false
+      });
+      this.transitionToRoute('product', product.id);
     }
   }
 });

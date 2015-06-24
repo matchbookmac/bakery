@@ -11,6 +11,7 @@ Router.map(function() {
   });
   this.resource("products", function () {
     this.resource("new-product", { path: "new" });
+    this.resource("edit");
     this.resource("product", { path: ":product_id" }, function () {
       this.resource("edit-product", { path: "edit" });
     });

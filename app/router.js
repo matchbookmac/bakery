@@ -19,6 +19,7 @@ Router.map(function() {
   this.route('admin');
   this.resource('contact');
   this.resource('contacts');
+  this.resource('more-info');
 });
 
 export default Router;

@@ -1,15 +1,26 @@
-<div>
-  <ul>
-  {{#each contact in model}}
-    <li>{{contact.businessName}}</li>
-    <ul>
-      <li>Email: {{contact.emailAddress}}</li>
-      <li>Phone: {{contact.phone}}</li>
-      <li>Address: {{contact.streetAddress}}</li>
-      <li>City: {{contact.city}}</li>
-      <li>State: {{contact.state}}</li>
-      <li>Zip: {{contact.zip}}</li>
-    </ul>
-  {{/each}}
-  </ul>
-</div>
+
+
+<table class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>Business Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Street Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip Code</th>
+  </tr>
+  <tbody>
+    {{#each contact in model}}
+      <tr>
+        <td>{{contact.businessName}}</td>
+        <td><a href="mailto:{{contact.emailAddress}}">{{contact.emailAddress}}</a></td>
+        <td>{{contact.phone}}</td>
+        <td>{{contact.streetAddress}}</td>
+        <td>{{contact.city}}</td>
+        <td>{{contact.state}}</td>
+        <td>{{contact.zip}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

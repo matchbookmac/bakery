@@ -1,4 +1,11 @@
-<h3>{{model.title}}</h3>
-<p class="lead">${{model.cost}} for a batch of {{model.batchSize}}
-</p>
-<p>{{model.description}}</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>{{model.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="lead alert alert-success">
+      <strong>${{model.cost}}</strong> for a batch of <strong>{{model.batchSize}}</strong>
+    </div>
+    {{model.description}}
+  </div>
+</div>

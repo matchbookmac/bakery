@@ -1,7 +1,12 @@
+body {
+  background-image: url(../images/brick.jpg);
+}
+
 .stretch {
   padding-right: 0px;
   padding-left: 10px;
 }
+
 .submit-btn {
   margin-top: 20px;
 }

@@ -1,13 +1,18 @@
 <div class="col-md-3">
-  <ul>
-    {{#each product in model}}
-      <li>
-        {{#link-to "product" product.id}}{{product.title}}{{/link-to}}
-      </li>
-    {{/each}}
-  </ul>
+  {{partial "products/product-list"}}
 </div>
 
 <div class="col-md-9">
-  {{outlet}}
+
+  {{#if viewing}}
+    {{outlet}}
+  {{/if}}
+
+  {{#if adding}}
+    {{partial "products/new-product"}}
+  {{/if}}
+
+  {{#if editing}}
+    {{partial "products/edit-product"}}
+  {{/if}}
 </div>

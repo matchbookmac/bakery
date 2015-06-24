@@ -11,8 +11,11 @@ Router.map(function() {
   });
   this.resource("products", function () {
     this.resource("new-product", { path: "new" });
-    this.resource("product", {path: ":product_id"});
+    this.resource("product", { path: ":product_id" }, function () {
+      this.resource("edit-product", { path: "edit" });
+    });
   });
+  this.route('admin');
 });
 
 export default Router;

@@ -1,1 +1,13 @@
-{{outlet}}
+<div class="col-md-3">
+  <ul>
+    {{#each product in model}}
+      <li>
+        {{#link-to "product" product.id}}{{product.title}}{{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="col-md-9">
+  {{outlet}}
+</div>

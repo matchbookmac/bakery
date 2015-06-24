@@ -11,8 +11,8 @@ Router.map(function() {
   });
   this.resource("products", function () {
     this.resource("new-product", { path: "new" });
+    this.resource("product", {path: ":product_id"});
   });
-  this.route('products');
 });
 
 export default Router;

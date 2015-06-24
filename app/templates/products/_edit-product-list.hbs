@@ -1,8 +1,11 @@
-<ul>
-  edit product list
+edit product list
+
+<div class="list-group">
   {{#each product in model}}
-    <li>
-      {{#link-to "edit-product" product.id}}{{product.title}}{{/link-to}}
-    </li>
+    {{#link-to "edit-product" product.id class="list-group-item"}}
+      <h4 class="list-group-item-heading">
+        {{product.title}}
+      </h4>
+    {{/link-to}}
   {{/each}}
-</ul>
+</div>

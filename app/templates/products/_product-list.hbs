@@ -1,4 +1,5 @@
 <ul>
+  normal product list
   {{#each product in model}}
     <li {{action "viewProduct"}}>
       {{#link-to "product" product.id}}{{product.title}}{{/link-to}}

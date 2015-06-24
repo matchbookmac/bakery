@@ -4,15 +4,14 @@ export default Ember.Controller.extend({
   needs: ['products'],
   actions: {
     createProduct: function () {
-      var that = this;
       var product = this.store.createRecord("product", {
         title: this.get("title"),
         description: this.get("description"),
         batchSize: this.get("batchSize"),
         cost: this.get("cost")
       });
-      product.save()
-      var productsController = this.get('controllers.products')
+      product.save();
+      var productsController = this.get('controllers.products');
       productsController.setProperties({
         viewing: true,
         editing: false,
@@ -23,7 +22,7 @@ export default Ember.Controller.extend({
         description: '',
         batchSize: '',
         cost: ''
-      })
+      });
       this.transitionToRoute('products');
     }
   }

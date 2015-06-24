@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   needs: ['products'],
   actions: {
     updateProduct: function() {
-      var product = this.get("model")
+      var product = this.get("model");
       product.setProperties({
         title: this.get("model.title"),
         description: this.get("model.description"),
@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
         cost: this.get("model.cost")
       });
       product.save();
-      var productsController = this.get('controllers.products')
+      var productsController = this.get('controllers.products');
       productsController.setProperties({
         editing: true,
         viewing: false,
@@ -23,13 +23,13 @@ export default Ember.Controller.extend({
     deleteProduct: function () {
       var product = this.get("model");
       product.destroyRecord();
-      var productsController = this.get('controllers.products')
+      var productsController = this.get('controllers.products');
       productsController.setProperties({
         editing: true,
         viewing: false,
         adding: false
       });
-      this.transitionToRoute("edit")
+      this.transitionToRoute("edit");
     }
   }
 });

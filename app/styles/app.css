@@ -1,33 +1,11 @@
+body {
+  background-image: url(../images/brick.jpg);
+}
+
 .stretch {
   padding-right: 0px;
   padding-left: 10px;
 }
-
-/*.product-list {
-  border: 1px dashed rgba(0, 0, 0, 0.5);;
-  border-radius: 5px;
-  padding: 5px;
-  padding-left: 10px;
-  margin-bottom: 20px;
-}
-
-a .product-list:hover {
-  cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 1);;
-}
-
-a .product-list {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-}*/
 
 .submit-btn {
   margin-top: 20px;

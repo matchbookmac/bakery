@@ -5,7 +5,6 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     addContact: function() {
-      debugger
       var newContact = this.store.createRecord('contact', {
         businessName: this.get('businessName'),
         emailAddress: this.get('emailAddress'),

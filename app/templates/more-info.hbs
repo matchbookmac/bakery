@@ -14,7 +14,11 @@
 <p>{{product.title}}</p>
 {{/each}}
 
-
+<hr>
+{{view "select" content=model
+                optionLabelPath="content.title"
+                optionValuePath="content.id"
+                prompt="Choose the products:"}}
 <!-- export default DS.Model.extend({
   title: DS.attr("string"),
   description: DS.attr("string"),

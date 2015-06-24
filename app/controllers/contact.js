@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-//needs: ['products']
+needs: ['products']
 
 export default Ember.Controller.extend({
   actions: {
@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
       var newContact = this.store.createRecord('contact', {
         businessName: this.get('businessName'),
         emailAddress: this.get('emailAddress'),
-        //products:
+        //products: this.get('')
         streetAddress: this.get('streetAddress'),
         city: this.get('city'),
         state: this.get('state'),

@@ -26,3 +26,8 @@ body {
   width: 32%;
   border: 1px solid #ccc;
 }
+
+td {
+  padding-left: 0px; 
+  padding-right: 0px;
+}

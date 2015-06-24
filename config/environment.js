@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'bakery',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://bakerypdx.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

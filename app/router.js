@@ -7,16 +7,13 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource("about", { path: "/" });
-  this.resource("admin", function () {
-  });
+  this.resource("admin");
   this.resource("products", function () {
     this.resource("new-product", { path: "new" });
     this.resource("edit");
-    this.resource("product", { path: ":product_id" }, function () {
-      this.resource("edit-product", { path: "edit" });
-    });
+    this.resource("product", { path: ":product_id" });
+    this.resource("edit-product", { path: ":product_id/edit" });
   });
-  this.route('admin');
   this.resource('contact');
   this.resource('contacts');
   this.resource('more-info');

@@ -1,3 +1,7 @@
+.stretch {
+  padding-right: 0px;
+  padding-left: 10px;
+}
 .submit-btn {
   margin-top: 20px;
 }
@@ -5,6 +9,7 @@
 .form-control {
   width: 97%
 }
+
 .address {
   height: 34px;
   padding: 6px 12px;

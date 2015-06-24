@@ -15,7 +15,6 @@ export default Ember.Controller.extend({
         zip: this.get('zip'),
         phone: this.get('phone')
       });
-
       newContact.save();
       this.setProperties({
         businessName: " ",
@@ -26,10 +25,7 @@ export default Ember.Controller.extend({
         zip: " ",
         phone: " "
       });
-      this.transitionToRoute('contact');
-
-
-
+      this.transitionToRoute('products');
     }
   }
 });

@@ -10,11 +10,11 @@ export default Ember.Controller.extend({
         businessName: this.get('businessName'),
         emailAddress: this.get('emailAddress'),
         //products:
-        // streetAddress: this.get('streetAddress'),
-        // city: this.get('city'),
-        // state: this.get('state'),
-        // zip: this.get('zip'),
-        // phone: this.get('phone')
+        streetAddress: this.get('streetAddress'),
+        city: this.get('city'),
+        state: this.get('state'),
+        zip: this.get('zip'),
+        phone: this.get('phone')
       });
 
       newContact.save();

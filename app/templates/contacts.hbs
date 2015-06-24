@@ -2,6 +2,14 @@
   <ul>
   {{#each contact in model}}
     <li>{{contact.businessName}}</li>
+    <ul>
+      <li>Email: {{contact.emailAddress}}</li>
+      <li>Phone: {{contact.phone}}</li>
+      <li>Address: {{contact.streetAddress}}</li>
+      <li>City: {{contact.city}}</li>
+      <li>State: {{contact.state}}</li>
+      <li>Zip: {{contact.zip}}</li>
+    </ul>
   {{/each}}
   </ul>
 </div>

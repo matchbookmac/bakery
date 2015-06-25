@@ -1,57 +1,46 @@
-<div class="well">
-  <table class="table table-striped table-bordered table-condensed">
-    <thead>
-      <tr>
-        <th>Business Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Street Address</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Zip Code</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each contact in model}}
+<div class="col-md-7">
+  <div class="well">
+    <table class="table table-striped table-bordered table-condensed">
+      <thead>
         <tr>
-          <td>{{contact.businessName}}</td>
-          <td><a href="mailto:{{contact.emailAddress}}">{{contact.emailAddress}}</a></td>
-          <td>{{contact.phone}}</td>
-          <td>{{contact.streetAddress}}</td>
-          <td>{{contact.city}}</td>
-          <td>{{contact.state}}</td>
-          <td>{{contact.zip}}</td>
+          <th>Business Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Product Interests</th>
         </tr>
-      {{/each}}
-    </tbody>
-  </table>
-  <table class="table table-striped table-bordered table-condensed">
-    <thead>
-      <th>Business Name</th>
-      <th>Product Interests</th>
-    </thead>
-    <tbody>
-      {{#each contact in model}}
-        <tr>
-          <td>{{contact.businessName}}</td>
-          <td>{{contact.productInterest}}</td>
-        </tr>
-      {{/each}}
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        {{#each contact in model}}
+          <tr>
+            <td>{{contact.businessName}}</td>
+            <td><a href="mailto:{{contact.emailAddress}}">{{contact.emailAddress}}</a></td>
+            <td>{{contact.phone}}</td>
+            <td>
+              <address>
+                {{contact.streetAddress}}<br>
+                {{contact.city}}, {{contact.state}} {{contact.zip}}
+              </address>
+            </td>
+            <td>{{contact.productInterest}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 </div>
-<div id="map">
 
-  {{#if hideMap}}
-    <div {{action 'toggleMap'}}>
-      {{#link-to 'contacts-map' class="btn btn-info"}} Open Map {{/link-to}}
-    </div>
-  {{else}}
-    <div {{action 'toggleMap'}}>
-      {{#link-to 'contacts' class="btn btn-warning"}} Close Map {{/link-to}}
-    </div>
-  {{/if}}
-
-  {{outlet "contactsMap"}}
-
+<div class="col-md-5">
+  <div class="well">
+    {{#if hideMap}}
+      <div {{action 'toggleMap'}}>
+        {{#link-to 'contacts-map' class="btn btn-info btn-block"}} Open Map {{/link-to}}
+      </div>
+    {{else}}
+      <div {{action 'toggleMap'}}>
+        {{#link-to 'contacts' class="btn btn-warning btn-block"}} Close Map {{/link-to}}
+      </div>
+    {{/if}}
+    {{outlet "contactsMap"}}
+  </div>
 </div>

@@ -23,7 +23,7 @@ export default Ember.ArrayController.extend({
         state: this.get('state'),
         zip: this.get('zip'),
         phone: this.get('phone'),
-        productInterest: checkedBoxes.join(" "),
+        productInterest: checkedBoxes.join(", "),
       });
       debugger
 

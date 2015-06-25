@@ -37,7 +37,7 @@ td {
 }
 
 .map-canvas {
-  width: 600px;
+  width: 400px;
   height: 400px;
 }
 
@@ -46,6 +46,10 @@ td {
   background-color: lightgrey;
   margin: 0px;
   padding: 10px;
+}
+
+.glyphicon-grain {
+  font-size: 1.5em;
 }
 
 #inner-navbar {
@@ -73,3 +77,4 @@ td {
 
 #home-grain {
   font-size: 13.5em;
+}

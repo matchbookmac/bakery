@@ -1,17 +1,18 @@
-<h1>Contacts Map!</h1>
-
+<h3 class="text-center">Contacts Map!</h3>
 {{google-map
   markerInfoWindowTemplateName='info-window'
-             markers=model
-             lat=centerLat
-             lng=centerLng
-             zoom=zoom
-             gopt_zoomControl=false
-             type='street'}}
+            markers=model
+            lat=centerLat
+            lng=centerLng
+            zoom=zoom
+            gopt_zoomControl=true
+            type='street'
+            gopt_scaleControl=true
+}}
 
-<div class="controls">
+<!-- <div class="controls">
   <label>
     Zoom:
     {{input type="range" value=zoom min=0 max=18 step=1}}
   </label>
-</div>
+</div> -->

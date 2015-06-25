@@ -1,11 +1,10 @@
-edit product list
+<div class="panel panel-default">
 
-<div class="list-group">
+    <h3 class="product-select-header">Edit Products</h3>
+
   {{#each product in model}}
     {{#link-to "edit-product" product.id class="list-group-item"}}
-      <h4 class="list-group-item-heading">
-        {{product.title}}
-      </h4>
+      {{product.title}}
     {{/link-to}}
   {{/each}}
 </div>

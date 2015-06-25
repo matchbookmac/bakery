@@ -1,9 +1,15 @@
 import Ember from 'ember';
 
+<<<<<<< HEAD
 
 
 export default Ember.ArrayController.extend({
   needs: ['products', 'contact'],
+=======
+
+export default Ember.ArrayController.extend({
+  needs: ['products', 'contacts'],
+>>>>>>> 7ca41059e83f93eff518341786e85c55728815b9
   selectedProductsList: null,
   isChecked: false,
   actions: {
@@ -26,28 +32,11 @@ export default Ember.ArrayController.extend({
     checkboxParseTest: function() {
       var checkedBoxes = [];
       var origObject = this;
-
-
-
-      // this is also deprecated
       this.forEach(function(item) {
-
-        // if (origObject.get('item.selected'))
         if (item.get('selected') == true) {
-          debugger;
           checkedBoxes.push(item.get('title'));
         }
       });
-      debugger;
-
-
-      // the following is deprecated
-      // var checkboxes = document.getElementsByClassName('checkbox');
-      // for (var i = 0; i <= checkboxes.length; i++) {
-      //   if (checkboxes[i].selected) {
-      //     checkedBoxes.push(checkboxes[i]);
-      //   }
-      // }
     }
   }
 });

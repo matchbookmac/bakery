@@ -15,8 +15,12 @@ Router.map(function() {
     this.resource("edit-product", { path: ":product_id/edit" });
   });
   this.resource('contact');
-  this.resource('contacts');
+  this.resource('contacts', function(){
+    this.resource('contacts-map', function () {
+    });
+  });
   this.resource('more-info');
+
 });
 
 export default Router;

@@ -46,6 +46,10 @@ td {
   padding: 10px;
 }
 
+.glyphicon-grain {
+  font-size: 1.5em;
+}
+
 #inner-navbar {
   background-color: #DDF2B9;
   border-style: none;
@@ -71,3 +75,4 @@ td {
 
 #home-grain {
   font-size: 13.5em;
+}

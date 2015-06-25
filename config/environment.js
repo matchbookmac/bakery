@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'bakery',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx http://maps.googleapis.com/* http://maps.gstatic.com/*" },
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx maps.googleapis.com maps.gstatic.com" },
     firebase: 'https://bakerypdx.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
@@ -21,11 +21,11 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://maps.googleapis.com/* http://maps.gstatic.com/* https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css",
-      'font-src': "'self'",
-      'connect-src': "'self' https://bakerypdx.firebaseio.com/ wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx http://maps.googleapis.com/* http://maps.gstatic.com/*",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com maps.gstatic.com https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css",
+      'font-src': "'self' maxcdn.bootstrapcdn.com fonts.gstatic.com",
+      'connect-src': "'self' https://bakerypdx.firebaseio.com/ wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx maps.googleapis.com maps.gstatic.com/*",
+      'img-src': "'self' maps.googleapis.com *.gstatic.com *.googleapis.com",
+      'style-src': "'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css http://fonts.googleapis.com/css?family=Roboto:300,400,500,700",
       'frame-src': "'none'"
     }
   };

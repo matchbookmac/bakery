@@ -41,6 +41,17 @@
   </table>
 </div>
 <div id="map">
-  {{#link-to 'contacts-map'}} Open Maps {{/link-to}}
+
+  {{#if hideMap}}
+    <div {{action 'toggleMap'}}>
+      {{#link-to 'contacts-map' class="btn btn-info"}} Open Map {{/link-to}}
+    </div>
+  {{else}}
+    <div {{action 'toggleMap'}}>
+      {{#link-to 'contacts' class="btn btn-warning"}} Close Map {{/link-to}}
+    </div>
+  {{/if}}
+
   {{outlet "contactsMap"}}
+
 </div>

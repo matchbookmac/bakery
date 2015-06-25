@@ -20,6 +20,8 @@ Router.map(function() {
     });
   });
   this.resource('more-info');
+  this.route('protected');
+  this.route('login');
 
 });
 

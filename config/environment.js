@@ -30,6 +30,15 @@ module.exports = function(environment) {
     }
   };
 
+ENV['torii'] = {
+  providers: {
+    'google-oauth2': {
+      apiKey: '3598541402-l9kkoktchd4or6gdvplfkmagm20vanuo.apps.googleusercontent.com',
+      scope: 'profile',
+      redirectUri: 'http://localhost:4200'
+    }
+  }
+};
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

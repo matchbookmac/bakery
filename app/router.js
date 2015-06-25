@@ -7,7 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource("about", { path: "/" });
-  this.resource("admin");
+  this.resource("admin", function () {
+    this.resource('login');
+  });
   this.resource("products", function () {
     this.resource("new-product", { path: "new" });
     this.resource("edit");
@@ -20,6 +22,7 @@ Router.map(function() {
     });
   });
   this.resource('more-info');
+  this.route('protected');
 
 });
 

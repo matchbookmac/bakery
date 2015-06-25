@@ -21,15 +21,24 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://maps.googleapis.com/* http://maps.gstatic.com/*",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://maps.googleapis.com/* http://maps.gstatic.com/* https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css",
       'font-src': "'self'",
       'connect-src': "'self' https://bakerypdx.firebaseio.com/ wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx http://maps.googleapis.com/* http://maps.gstatic.com/*",
       'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline'",
+      'style-src': "'self' 'unsafe-inline' https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css",
       'frame-src': "'none'"
     }
   };
 
+ENV['torii'] = {
+  providers: {
+    'google-oauth2': {
+      apiKey: '3598541402-l9kkoktchd4or6gdvplfkmagm20vanuo.apps.googleusercontent.com',
+      scope: 'profile',
+      redirectUri: 'http://localhost:4200'
+    }
+  }
+};
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

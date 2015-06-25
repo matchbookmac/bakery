@@ -1,5 +1,7 @@
 body {
-  background-image: url(../images/brick.jpg);
+  /*background-image: url(http://img0.mxstatic.com/wallpapers/78fba6df8a1be5965335f7b89666ef59_large.jpeg);*/
+  background-color: #FFE6C4;
+  font-family: serif;
 }
 
 .stretch {
@@ -43,5 +45,31 @@ td {
   text-align: center;
   background-color: lightgrey;
   margin: 0px;
-  padding: 15px;
+  padding: 10px;
 }
+
+#inner-navbar {
+  background-color: #DDF2B9;
+  border-style: none;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: .5px
+  border-color: black;
+  padding: 5px;
+}
+
+#outer-navbar {
+  background-color: #DDF2B9;
+  border-style: none;
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+  border-color: black;
+  padding: 5px;
+}
+
+/*li .ember-view {
+  background-color: lightgreen;
+}*/
+
+#home-grain {
+  font-size: 13.5em;

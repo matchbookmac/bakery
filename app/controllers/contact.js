@@ -6,23 +6,6 @@ export default Ember.ArrayController.extend({
   selectedProductsList: null,
   isChecked: false,
   actions: {
-    //  contactProducts: function() {
-    //    var selectedProducts = this.get('selectedProductsList');
-    //  },
-     //
-    //  checkBox: function(params) {
-    //    var box = this.store.find('product', params.id);
-    //    if (box.selected) {
-    //      box.setProperties({
-    //        selected: false,
-    //      });
-    //    } else {
-    //      box.setProperties({
-    //        selected: true,
-    //      });
-    //    }
-    //  },
-
     addContact: function() {
       var checkedBoxes = [];
       var origObject = this;

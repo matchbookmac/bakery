@@ -6,15 +6,15 @@
   <div class="panel-body">
     <form>
     <!-- CHECKBOXES -->
-      <h2>Check all the Products You're be Interested In!</h2>
+      <h3>Please Check all the Products You're Interested In: </h3>
       {{#each product in model}}
-        {{input type="checkbox" name=product.title checked=product.selected class="checkbox" action="checkBox"}} {{product.title}}
-        <br>
+        <div class="col-md-4">
+          {{input type="checkbox" name=product.title checked=product.selected class="checkbox" action="checkBox"}} {{product.title}}
+          <br>
+        </div>
       {{/each}}
-      {{input type="text" placeholder="Email from Contact Page" value=emailAddress class="address"}}
-      <!-- <button class="btn btn-submit" {{action 'contactProducts'}}>Submit</button> -->
-      <!-- <button class="btn btn-default" {{action 'checkboxParseTest'}}>Checkbox Test</button> -->
     <hr>
+    <br>
   <!-- CHECKBOXES -->
       {{input type="text" placeholder="Business Name" value=businessName class="form-control"}}
       <br>

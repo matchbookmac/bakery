@@ -15,6 +15,10 @@ export default Ember.Route.extend({
         'editing': false,
         'viewing': false
       });
+    },
+    googleLogin: function() {
+      this.get('session').authenticate('simple-auth-authenticator:torii', 'google-oauth2');
+      return;
     }
   }
 });

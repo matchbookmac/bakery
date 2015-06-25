@@ -35,6 +35,7 @@ export default Ember.ArrayController.extend({
           checkedBoxes.push(item.get('title'));
         }
       });
+      debugger;
     }
   }
 });

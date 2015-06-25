@@ -25,6 +25,20 @@
       {{/each}}
     </tbody>
   </table>
+  <table class="table table-striped table-bordered table-condensed">
+    <thead>
+      <th>Business Name</th>
+      <th>Product Interests</th>
+    </thead>
+    <tbody>
+      {{#each contact in model}}
+        <tr>
+          <td>{{contact.businessName}}</td>
+          <td>{{contact.productInterest}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
 </div>
 <div id="map">
   {{outlet "contactsMap"}}

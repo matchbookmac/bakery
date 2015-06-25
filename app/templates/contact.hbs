@@ -2,8 +2,20 @@
   <div class="panel-heading">
     <h3 class="panel-title">CONTACT US</h3>
   </div>
+
   <div class="panel-body">
     <form>
+    <!-- CHECKBOXES -->
+      <h2>Check all the Products You're be Interested In!</h2>
+      {{#each product in model}}
+        {{input type="checkbox" name=product.title checked=product.selected class="checkbox" action="checkBox"}} {{product.title}}
+        <br>
+      {{/each}}
+      {{input type="text" placeholder="Email from Contact Page" value=emailAddress class="address"}}
+      <!-- <button class="btn btn-submit" {{action 'contactProducts'}}>Submit</button> -->
+      <!-- <button class="btn btn-default" {{action 'checkboxParseTest'}}>Checkbox Test</button> -->
+    <hr>
+  <!-- CHECKBOXES -->
       {{input type="text" placeholder="Business Name" value=businessName class="form-control"}}
       <br>
       {{input type="text" placeholder="Email" value=emailAddress class="form-control"}}

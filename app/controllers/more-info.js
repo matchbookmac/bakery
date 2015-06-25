@@ -1,15 +1,13 @@
 import Ember from 'ember';
 
-<<<<<<< HEAD
+
+
+
 
 
 export default Ember.ArrayController.extend({
   needs: ['products', 'contact'],
-=======
 
-export default Ember.ArrayController.extend({
-  needs: ['products', 'contacts'],
->>>>>>> 7ca41059e83f93eff518341786e85c55728815b9
   selectedProductsList: null,
   isChecked: false,
   actions: {

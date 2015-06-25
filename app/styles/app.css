@@ -32,6 +32,11 @@ td {
   padding-right: 0px;
 }
 
+.map-canvas {
+  width: 600px;
+  height: 400px;
+}
+
 .panel-default > .product-select-header {
   text-align: center;
   background-color: lightgrey;

@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
-needs: ['products', 'contacts']
 
 export default Ember.ArrayController.extend({
+  needs: ['products', 'contacts'],
   selectedProductsList: null,
   isChecked: false,
   actions: {
@@ -14,8 +14,9 @@ export default Ember.ArrayController.extend({
       var checkedBoxes;
       var checkboxes = document.getElementsByClass('checkbox');
       checkboxes.forEach(function(box){
-        if (box.checked)
+        if (box.checked) {
           checkedBoxes.push(box);
+        }
       });
       // the above is problematic and relatively untested, will continue on Thurs at 0900
 

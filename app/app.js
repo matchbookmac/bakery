@@ -13,6 +13,8 @@ App = Ember.Application.extend({
   Resolver: Resolver
 });
 
+Ember.deprecate = function(){};
+
 loadInitializers(App, config.modulePrefix);
 
 export default App;

@@ -28,6 +28,13 @@ body {
 }
 
 td {
-  padding-left: 0px; 
+  padding-left: 0px;
   padding-right: 0px;
+}
+
+.panel-default > .product-select-header {
+  text-align: center;
+  background-color: lightgrey;
+  margin: 0px;
+  padding: 15px;
 }

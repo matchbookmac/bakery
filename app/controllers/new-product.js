@@ -8,7 +8,8 @@ export default Ember.Controller.extend({
         title: this.get("title"),
         description: this.get("description"),
         batchSize: this.get("batchSize"),
-        cost: this.get("cost")
+        cost: this.get("cost"),
+        selected: false
       });
       product.save();
       var productsController = this.get('controllers.products');

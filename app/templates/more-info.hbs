@@ -1,32 +1,34 @@
-<h1>MORE INFO</h1>
-<div class="container">
-  <h2>Check all the Products You're be Interested In!</h2>
+<div style="background-color: white">
+  <h1>MORE INFO</h1>
+  <div>
+    <h2>Check all the Products You're be Interested In!</h2>
+    {{#each product in model}}
+      {{input type="checkbox" name=product.title checked=product.selected class="checkbox" action="checkBox"}} {{product.title}}
+      <br>
+    {{/each}}
+    {{input type="text" placeholder="Email from Contact Page" value=emailAddress class="address"}}
+    <button class="btn btn-submit" {{action 'contactProducts'}}>Submit</button>
+    <button class="btn btn-default" {{action 'checkboxParseTest'}}>Checkbox Test</button>
+  </div>
+  <hr>
+  <!-- to see if they're creating new products while we're testing -->
   {{#each product in model}}
-    {{input type="checkbox" name=product.title checked=false class="checkbox"}} {{product.title}}
-    <br>
+  <p>{{product.title}}</p>
   {{/each}}
-  {{input type="text" placeholder="Email from Contact Page" value=emailAddress class="address"}}
-  <button class="btn btn-submit" {{action 'contactProducts'}}>Submit</button>
-  <button class="btn btn-default" {{action 'checkboxParseTest'}}>Checkbox Test</button>
-</div>
-<hr>
-<!-- to see if they're creating new products while we're testing -->
-{{#each product in model}}
-<p>{{product.title}}</p>
-{{/each}}
 
-<hr>
-{{view "select" content=model
-                optionLabelPath="content.title"
-                optionValuePath="content.id"
-                name="moreInfoSelect"
-                id="moreInfoSelect"
-                size=model.length
-                selectionBinding=selectedProductsList
-                multiple="true"}}
-<!-- export default DS.Model.extend({
-  title: DS.attr("string"),
-  description: DS.attr("string"),
-  batchSize: DS.attr("number"),
-  cost: DS.attr("number"),
-  contact: DS.belongsTo("contact", {async: true}) -->
+  <hr>
+  <!-- {{view "select" content=model
+                  optionLabelPath="content.title"
+                  optionValuePath="content.id"
+                  name="moreInfoSelect"
+                  id="moreInfoSelect"
+                  size=model.length
+                  selectionBinding=selectedProductsList
+                  multiple="true"}} -->
+  <!-- export default DS.Model.extend({
+    title: DS.attr("string"),
+    description: DS.attr("string"),
+    batchSize: DS.attr("number"),
+    cost: DS.attr("number"),
+    contact: DS.belongsTo("contact", {async: true}) -->
+</div>

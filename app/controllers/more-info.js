@@ -1,38 +1,40 @@
 import Ember from 'ember';
 
-needs: ['products', 'contacts']
+
+
+
+
 
 export default Ember.ArrayController.extend({
+  needs: ['products', 'contact'],
+
   selectedProductsList: null,
   isChecked: false,
   actions: {
     contactProducts: function() {
       var selectedProducts = this.get('selectedProductsList');
     },
+
+    checkBox: function(params) {
+      var box = this.store.find('product', params.id);
+      if (box.selected) {
+        box.setProperties({
+          selected: false,
+        });
+      } else {
+        box.setProperties({
+          selected: true,
+        });
+      }
+    },
     checkboxParseTest: function() {
-      // moving to attempt to parse dom for inputs, gather them, then iterate through them to check for values
-      var checkedBoxes;
-      var checkboxes = document.getElementsByClass('checkbox');
-      checkboxes.forEach(function(box){
-        if (box.checked)
-          checkedBoxes.push(box);
+      var checkedBoxes = [];
+      var origObject = this;
+      this.forEach(function(item) {
+        if (item.get('selected') == true) {
+          checkedBoxes.push(item.get('title'));
+        }
       });
-      // the above is problematic and relatively untested, will continue on Thurs at 0900
-
-
-      // all comments below are failed experiments
-      // var allValues = this.get('model');
-      // var submittedValues;
-      // allValues.forEach(function(item){
-      //   if (item.isChecked)
-      // })
-      //
-      // for (var i = 0; i <= allValues.length; i++) {
-      //   if (allValues[i].isChecked){
-      //     submittedValues.push(allValues[i]);
-      //   }
-      // }
-      // debugger;
     }
   }
 });

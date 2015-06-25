@@ -3,7 +3,7 @@
   <div>
     <h2>Check all the Products You're be Interested In!</h2>
     {{#each product in model}}
-      {{input type="checkbox" name=product.title checked=false class="checkbox"}} {{product.title}}
+      {{input type="checkbox" name=product.title checked=product.selected class="checkbox" action="checkBox"}} {{product.title}}
       <br>
     {{/each}}
     {{input type="text" placeholder="Email from Contact Page" value=emailAddress class="address"}}
@@ -17,14 +17,14 @@
   {{/each}}
 
   <hr>
-  {{view "select" content=model
+  <!-- {{view "select" content=model
                   optionLabelPath="content.title"
                   optionValuePath="content.id"
                   name="moreInfoSelect"
                   id="moreInfoSelect"
                   size=model.length
                   selectionBinding=selectedProductsList
-                  multiple="true"}}
+                  multiple="true"}} -->
   <!-- export default DS.Model.extend({
     title: DS.attr("string"),
     description: DS.attr("string"),

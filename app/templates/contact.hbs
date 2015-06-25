@@ -2,8 +2,20 @@
   <div class="panel-heading">
     <h3 class="panel-title">CONTACT US</h3>
   </div>
+
   <div class="panel-body">
     <form>
+    <!-- CHECKBOXES -->
+      <h3>Please Check all the Products You're Interested In: </h3>
+      {{#each product in model}}
+        <div class="col-md-4">
+          {{input type="checkbox" name=product.title checked=product.selected class="checkbox" action="checkBox"}} {{product.title}}
+          <br>
+        </div>
+      {{/each}}
+    <hr>
+    <br>
+  <!-- CHECKBOXES -->
       {{input type="text" placeholder="Business Name" value=businessName class="form-control"}}
       <br>
       {{input type="text" placeholder="Email" value=emailAddress class="form-control"}}

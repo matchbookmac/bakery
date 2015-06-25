@@ -1,10 +1,8 @@
-normal product list
-<div class="list-group">
-  {{#each product in model}}
+<div class="panel panel-default">
+  <h3 class="product-select-header">Product List</h3>
+    {{#each product in model}}
     {{#link-to "product" product.id class="list-group-item"}}
-      <h4 class="list-group-item-heading">
-        {{product.title}}
-      </h4>
+    {{product.title}}
     {{/link-to}}
-  {{/each}}
-</div>
+    {{/each}}
+  </div>

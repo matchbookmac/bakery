@@ -1,7 +1,15 @@
 # Bakery
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A dispensary of special baked goods
+
+## Authors
+
+* Ian MacDonald (matchbookmac)
+* Cory Spitzer (CorySpitzer)
+* Kha Le (kha-le)
+* Dan Minor (dantheminor)
+* Jesse James (jrjamespdx)
+* Andrew Lee (andrewlhy)
 
 ## Prerequisites
 
@@ -50,4 +58,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-

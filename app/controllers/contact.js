@@ -1,10 +1,19 @@
 import Ember from 'ember';
 
 
-export default Ember.Controller.extend({
+export default Ember.ArrayController.extend({
   needs: ['products'],
+  selectedProductsList: null,
+  isChecked: false,
   actions: {
     addContact: function() {
+      var checkedBoxes = [];
+      var origObject = this;
+      this.forEach(function(item) {
+        if (item.get('selected') == true) {
+          checkedBoxes.push(item.get('title'));
+        }
+      });
       var newContact = this.store.createRecord('contact', {
         businessName: this.get('businessName'),
         emailAddress: this.get('emailAddress'),
@@ -14,7 +23,26 @@ export default Ember.Controller.extend({
         state: this.get('state'),
         zip: this.get('zip'),
         phone: this.get('phone'),
+        productInterest: checkedBoxes.join(" "),
       });
+      debugger
+
+
+      // THIS IS FOR THE CHECKBOXES-------------
+      //  THIS IS FOR THE CHECKBOXES-------------
+      //  THIS IS FOR THE CHECKBOXES-------------
+      //  THIS IS FOR THE CHECKBOXES-------------
+      //
+      //  needs: ['products', 'contact'],
+       //
+
+      //  }
+      //  THIS IS FOR THE CHECKBOXES-------------
+      //  THIS IS FOR THE CHECKBOXES-------------
+      //  THIS IS FOR THE CHECKBOXES-------------
+      //  THIS IS FOR THE CHECKBOXES-------------
+
+
 
       var api_key = "AIzaSyBYLnE6A_CVHUO1RouMjmuBiMs4ZLQC2ZE";
       var addressNoSpace = this.get('streetAddress').replace(/\s/g, '');

@@ -25,8 +25,6 @@ export default Ember.ArrayController.extend({
         phone: this.get('phone'),
         productInterest: checkedBoxes.join(", "),
       });
-      debugger
-
 
       // THIS IS FOR THE CHECKBOXES-------------
       //  THIS IS FOR THE CHECKBOXES-------------
@@ -41,8 +39,6 @@ export default Ember.ArrayController.extend({
       //  THIS IS FOR THE CHECKBOXES-------------
       //  THIS IS FOR THE CHECKBOXES-------------
       //  THIS IS FOR THE CHECKBOXES-------------
-
-
 
       var api_key = "AIzaSyBYLnE6A_CVHUO1RouMjmuBiMs4ZLQC2ZE";
       var addressNoSpace = this.get('streetAddress').replace(/\s/g, '');

@@ -6,16 +6,23 @@
   <div class="panel-body">
     <form>
     <!-- CHECKBOXES -->
-      <h3>Please Check all the Products You're Interested In: </h3>
-      {{#each product in model}}
-        <div class="col-md-4">
-          {{input type="checkbox" name=product.title checked=product.selected class="checkbox" action="checkBox"}} {{product.title}}
-          <br>
+      <p class="lead text-center">Please Select all the Products You're Interested In: </p>
+      <div class="form-inline">
+        <div class="form-group col-md-12">
+          {{#each product in model}}
+            <div class="col-md-2">
+              <div class="checkbox">
+                <label>
+                  {{input type="checkbox" name=product.title checked=product.selected class="checkbox" action="checkBox"}} {{product.title}}
+                </label>
+              </div>
+            </div>
+          {{/each}}
         </div>
-      {{/each}}
-    <hr>
-    <br>
-  <!-- CHECKBOXES -->
+      </div>
+      <br>
+      <hr>
+    <!-- /CHECKBOXES -->
       {{input type="text" placeholder="Business Name" value=businessName class="form-control"}}
       <br>
       {{input type="text" placeholder="Email" value=emailAddress class="form-control"}}
@@ -27,8 +34,6 @@
       {{input type="text" placeholder="Zip Code" value=zip class="address"}}
       <br>
       {{input type="text" placeholder="Phone Number" value=phone class="form-control"}}
-
-      <!-- {{input type="text" placeholder="Products Interested In" value=Product}} -->
     </form>
   </div>
   <div class="panel-footer">

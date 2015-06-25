@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
-needs: ['products']
 
 export default Ember.Controller.extend({
+  needs: ['products'],
   actions: {
     addContact: function() {
       var newContact = this.store.createRecord('contact', {

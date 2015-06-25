@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'bakery',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com 'wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx'" },
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx http://maps.googleapis.com/* http://maps.gstatic.com/*" },
     firebase: 'https://bakerypdx.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
@@ -21,9 +21,9 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' http://maps.googleapis.com/* http://maps.gstatic.com/*",
       'font-src': "'self'",
-      'connect-src': "'self' https://bakerypdx.firebaseio.com/ wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx",
+      'connect-src': "'self' https://bakerypdx.firebaseio.com/ wss://s-dal5-nss-33.firebaseio.com/.ws?v=5&ns=bakerypdx http://maps.googleapis.com/* http://maps.gstatic.com/*",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline'",
       'frame-src': "'none'"

@@ -1,0 +1,49 @@
+<div class="well">
+  {{#if hideMap}}
+    <div {{action 'toggleMap'}}>
+      {{#link-to 'contacts-map' class="btn btn-info btn-block"}} Open Map {{/link-to}}
+    </div>
+  {{/if}}
+  <br>
+  <div class="table-responsive">
+    <table id="contact-table" class="table table-striped table-bordered">
+      <col id="name"/>
+      <col span="2" id="email-phone"/>
+      <col id="address"/>
+      <col id="interests"/>
+      <thead>
+        <tr>
+          <th>Business Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Address</th>
+          <th>Product Interests</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each contact in model}}
+          <tr>
+            <td>{{contact.businessName}}</td>
+            <td><a href="mailto:{{contact.emailAddress}}">{{contact.emailAddress}}</a></td>
+            <td>{{contact.phone}}</td>
+            <td>
+              <address>
+                {{contact.streetAddress}}<br>
+                {{contact.city}}, {{contact.state}} {{contact.zip}}
+              </address>
+            </td>
+            <td>
+              <table>
+                {{#each interest in contact.productInterest}}
+                <tr>
+                  <td>{{interest.title}}</td>
+                </tr>
+                {{/each}}
+              </table>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

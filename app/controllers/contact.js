@@ -26,20 +26,6 @@ export default Ember.ArrayController.extend({
         productInterest: checkedBoxes.join(", "),
       });
 
-      // THIS IS FOR THE CHECKBOXES-------------
-      //  THIS IS FOR THE CHECKBOXES-------------
-      //  THIS IS FOR THE CHECKBOXES-------------
-      //  THIS IS FOR THE CHECKBOXES-------------
-      //
-      //  needs: ['products', 'contact'],
-       //
-
-      //  }
-      //  THIS IS FOR THE CHECKBOXES-------------
-      //  THIS IS FOR THE CHECKBOXES-------------
-      //  THIS IS FOR THE CHECKBOXES-------------
-      //  THIS IS FOR THE CHECKBOXES-------------
-
       var api_key = "AIzaSyBYLnE6A_CVHUO1RouMjmuBiMs4ZLQC2ZE";
       var addressNoSpace = this.get('streetAddress').replace(/\s/g, '');
       var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + addressNoSpace + this.get('city') + this.get('state') + this.get('zip') + '&key=' + api_key;

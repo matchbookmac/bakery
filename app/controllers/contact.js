@@ -15,12 +15,15 @@ export default Ember.ArrayController.extend({
         state: this.get('state'),
         zip: this.get('zip'),
         phone: this.get('phone'),
-        productInterest:  this.forEach(function(item) {
-                            if (item.get('selected')) {
-                              return item;
-                            }
-                          })
       });
+
+      this.forEach(function(item) {
+        if (item.get('selected')) {
+          newContact.get('productInterest').pushObject(item);
+        }
+      });
+
+      newContact.save();
 
       var api_key = "AIzaSyBYLnE6A_CVHUO1RouMjmuBiMs4ZLQC2ZE";
       var addressNoSpace = this.get('streetAddress').replace(/\s/g, '');

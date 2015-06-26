@@ -1,5 +1,4 @@
 body {
-  /*background-image: url(http://img0.mxstatic.com/wallpapers/78fba6df8a1be5965335f7b89666ef59_large.jpeg);*/
   background-color: #FFE6C4;
   font-family: serif;
 }
@@ -13,27 +12,8 @@ body {
   margin-top: 20px;
 }
 
-.form-control {
-  width: 97%
-}
-
-.address {
-  height: 34px;
-  padding: 6px 12px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 1.4286;
-  color: #555;
-  border-radius: 4px;
-  width: 32%;
-  border: 1px solid #ccc;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}
-
-td {
-  padding-left: 0px;
-  padding-right: 0px;
+#contact-table {
+  white-space: nowrap;
 }
 
 .map-canvas {
@@ -71,10 +51,6 @@ td {
   border-color: black;
   padding: 5px;
 }
-
-/*li .ember-view {
-  background-color: lightgreen;
-}*/
 
 #home-grain {
   font-size: 13.5em;

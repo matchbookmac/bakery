@@ -8,9 +8,8 @@ export default Ember.ArrayController.extend({
   actions: {
     addContact: function() {
       var checkedBoxes = [];
-      var origObject = this;
       this.forEach(function(item) {
-        if (item.get('selected') == true) {
+        if (item.get('selected')) {
           checkedBoxes.push(item.get('title'));
         }
       });
@@ -29,8 +28,9 @@ export default Ember.ArrayController.extend({
       var api_key = "AIzaSyBYLnE6A_CVHUO1RouMjmuBiMs4ZLQC2ZE";
       var addressNoSpace = this.get('streetAddress').replace(/\s/g, '');
       var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + addressNoSpace + this.get('city') + this.get('state') + this.get('zip') + '&key=' + api_key;
-      var latlng = function () {
-        return Ember.$.getJSON(url).then(function(responseJSON) {
+      // var latlng = function () {
+        // return 
+        Ember.$.getJSON(url).then(function(responseJSON) {
           var lat = responseJSON.results[0].geometry.location.lat;
           var lng = responseJSON.results[0].geometry.location.lng;
 
@@ -41,7 +41,7 @@ export default Ember.ArrayController.extend({
           newContact.save();
           return [lat, lng];
         });
-      }();
+      // }();
 
       this.setProperties({
         businessName: " ",

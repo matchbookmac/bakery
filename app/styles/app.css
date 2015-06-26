@@ -37,8 +37,9 @@ td {
 }
 
 .map-canvas {
-  width: 400px;
-  height: 400px;
+  padding: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .panel-default > .product-select-header {

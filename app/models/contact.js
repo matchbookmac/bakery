@@ -8,8 +8,7 @@ export default DS.Model.extend({
   state:  DS.attr('string'),
   zip:  DS.attr('string'),
   phone:  DS.attr('string'),
-  products: DS.hasMany('product', {async: true}),
-  productInterest: DS.attr('string'),
+  productInterest: DS.hasMany('product', {async: true}),
   lat: DS.attr('string'),
   lng: DS.attr('string')
 });

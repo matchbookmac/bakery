@@ -32,7 +32,15 @@
                 {{contact.city}}, {{contact.state}} {{contact.zip}}
               </address>
             </td>
-            <td>{{contact.productInterest}}</td>
+            <td>
+              <table>
+                {{#each interest in contact.productInterest}}
+                <tr>
+                  <td>{{interest.title}}</td>
+                </tr>
+                {{/each}}
+              </table>
+            </td>
           </tr>
         {{/each}}
       </tbody>

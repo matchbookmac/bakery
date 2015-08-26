@@ -1,6 +1,24 @@
+@font-face {
+  font-family: TradeGothic;
+  src: url("TradeGothicLTStd-BdCn20.otf");
+}
+
 body {
-  background-color: #FFE6C4;
-  font-family: serif;
+  background-color: #00904C;
+  font-family: TradeGothic;
+  color: white;
+}
+
+.navbar {
+  background-color: #00904C;
+  border: 5px solid black;
+  border-style: none none solid none;
+  border-radius: 0;
+  padding: 3px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
 }
 
 .stretch {
@@ -27,31 +45,4 @@ body {
   background-color: lightgrey;
   margin: 0px;
   padding: 10px;
-}
-
-.glyphicon-grain {
-  font-size: 1.5em;
-}
-
-#inner-navbar {
-  background-color: #DDF2B9;
-  border-style: none;
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-width: .5px
-  border-color: black;
-  padding: 5px;
-}
-
-#outer-navbar {
-  background-color: #DDF2B9;
-  border-style: none;
-  border-top-style: dashed;
-  border-bottom-style: dashed;
-  border-color: black;
-  padding: 5px;
-}
-
-#home-grain {
-  font-size: 13.5em;
 }
